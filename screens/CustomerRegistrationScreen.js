@@ -54,8 +54,14 @@ const CustomerRegistrationScreen = ({navigation}) => {
             confirm_password: val
         });
     }
+//================================
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { username: "", email: "", mobile: "", password: "", address: "", account: "" };
+    //   }
 
     return (
+        
       <View style={styles.container}>
           <StatusBar backgroundColor='black' barStyle="light-content"/>
         <View style={styles.header}>
@@ -74,6 +80,7 @@ const CustomerRegistrationScreen = ({navigation}) => {
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
+                    //onChangeText={username => this.setState({ username })}
                 />
                 
             </View>
@@ -88,7 +95,8 @@ const CustomerRegistrationScreen = ({navigation}) => {
                     secureTextEntry={data.secureTextEntry ? true : false}
                     style={styles.textInput}
                     autoCapitalize="none"
-                    onChangeText={(val) => handlePasswordChange(val)}
+                   onChangeText={(val) => handlePasswordChange(val)}
+                   //onChangeText={password => this.setState({ password })}
                 />
                
             </View>
@@ -104,6 +112,7 @@ const CustomerRegistrationScreen = ({navigation}) => {
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => handleConfirmPasswordChange(val)}
+                  // onChangeText={username => this.setState({ username })}
                 />
                 
             </View>
@@ -117,6 +126,7 @@ const CustomerRegistrationScreen = ({navigation}) => {
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
+                    //onChangeText={email => this.setState({ email })}
                 />
                 
             </View>
@@ -131,6 +141,7 @@ const CustomerRegistrationScreen = ({navigation}) => {
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
+                    //onChangeText={address => this.setState({ address })}
                 />
                 
             </View>
@@ -145,6 +156,7 @@ const CustomerRegistrationScreen = ({navigation}) => {
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
+                   //onChangeText={account => this.setState({ account })}
                 />
                 
             </View>
@@ -159,6 +171,7 @@ const CustomerRegistrationScreen = ({navigation}) => {
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
+                   // onChangeText={mobile => this.setState({ mobile })}
                 />
                 
             </View>
@@ -180,6 +193,7 @@ const CustomerRegistrationScreen = ({navigation}) => {
                        // marginTop: 15
                     }]}
                     onPress={() => alert('You are sucessfully register to the system.')}
+                    //onPress={this.login}
                     
                 >
                 
@@ -209,7 +223,36 @@ const CustomerRegistrationScreen = ({navigation}) => {
 };
 
 export default CustomerRegistrationScreen;
-
+// login = () => {
+//     const { navigate } = this.props.navigation;
+//     fetch("http://127.0.0.147:8000/user/", {
+//       method: "POST",
+//       headers: {
+//         Accept: "application/json",
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         email: this.state.email,
+//         password: this.state.password
+//       })
+//     })
+//       .then(function(response) {
+//         if (response.status === 201) {
+//           var token = response.headers.get("Authorization");
+//           // var decoded = jwtDecode(token);
+//           // AsyncStorage.setItem("MyStoreUser", decoded.sub);
+//           navigate("SignUpScreen");
+//         }
+//          else {
+//           alert("Wrong email or password");
+//           return;
+//         }
+//       })
+//       .catch(function(err) {
+//         console.log("Fetch Error", err);
+//       });
+//   };
+// }
 const styles = StyleSheet.create({
     container: {
       flex: 1, 

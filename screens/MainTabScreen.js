@@ -9,6 +9,17 @@ import DetailsScreen from './DetailsScreen';
 import ExploreScreen from './ExploreScreen';
 import ProfileScreen from './ProfileScreen';
 
+import FashionScreen from './FashionScreen';
+import FoodScreen from './FoodScreen';
+import GrossaryScreen from './GrossaryScreen';
+import ElectronicScreen from './ElectronicScreen';
+import CosmeticScreen from './CosmeticScreen';
+import StaionaryScreen from './StaionaryScreen';
+
+
+
+
+
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -97,6 +108,91 @@ const HomeStackScreen = ({navigation}) => (
           </Icon.Button>
         )
       }} />
+      <HomeStack.Screen
+        name = 'FashionScreen'
+        component = {FashionScreen}
+        options={{
+          
+          headerRight:()=>(
+            <Icon.Button name='search-outline'
+              size={25} 
+              backgroundColor='#251C23' 
+              onPress={() => navigation.openDrawer()}>
+            </Icon.Button>
+          )
+        }}
+      />
+      <HomeStack.Screen
+        name = 'GrossaryScreen'
+        component = {GrossaryScreen}
+        options={{
+          
+          headerRight:()=>(
+            <Icon.Button name='search-outline'
+              size={25} 
+              backgroundColor='#251C23' 
+              onPress={() => navigation.openDrawer()}>
+            </Icon.Button>
+          )
+        }}
+      />
+       <HomeStack.Screen
+        name = 'StaionaryScreen'
+        component = {StaionaryScreen}
+        options={{
+          
+          headerRight:()=>(
+            <Icon.Button name='search-outline'
+              size={25} 
+              backgroundColor='#251C23' 
+              onPress={() => navigation.openDrawer()}>
+            </Icon.Button>
+          )
+        }}
+      />
+      <HomeStack.Screen
+        name = 'CosmeticScreen'
+        component = {CosmeticScreen}
+        options={{
+          
+          headerRight:()=>(
+            <Icon.Button name='search-outline'
+              size={25} 
+              backgroundColor='#251C23' 
+              onPress={() => navigation.openDrawer()}>
+            </Icon.Button>
+          )
+        }}
+      />
+       <HomeStack.Screen
+        name = 'FoodScreen'
+        component = {FoodScreen}
+        options={{
+          
+          headerRight:()=>(
+            <Icon.Button name='search-outline'
+              size={25} 
+              backgroundColor='#251C23' 
+              onPress={() => navigation.openDrawer()}>
+            </Icon.Button>
+          )
+        }}
+      />
+      <HomeStack.Screen
+        name = 'ElectronicScreen'
+        component = {ElectronicScreen}
+        options={{
+          
+          headerRight:()=>(
+            <Icon.Button name='search-outline'
+              size={25} 
+              backgroundColor='#251C23' 
+              onPress={() => navigation.openDrawer()}>
+            </Icon.Button>
+          )
+        }}
+      />
+           
       
     </HomeStack.Navigator>
   );
@@ -124,4 +220,4 @@ const HomeStackScreen = ({navigation}) => (
       
     </DetailsStack.Navigator>
   );
-  
+ 

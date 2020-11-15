@@ -10,6 +10,7 @@ import ShopRegistrationScreen from './ShopRegistrationScreen';
 import DeliveryPersonregistrationScreen from './DeliveryPersonregistrationScreen';
 
 
+
 const RootStack = createStackNavigator();
 
 const RootStackScreen = ({navigation}) => (

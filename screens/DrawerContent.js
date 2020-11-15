@@ -105,7 +105,7 @@ export function DrawerContent(props){
               onPress={()=>{props.navigation.navigate('AboutScreen')}}
             />   
             </Drawer.Section>
-            <Drawer.Section title='Performanses'>
+            {/* <Drawer.Section title='Performanses'>
               <TouchableRipple onPress={() => {toggleTheme()}}>
                     <View style={styles.preference}>
                           <Text>Dark Theme</Text>
@@ -114,7 +114,7 @@ export function DrawerContent(props){
                               </View>
                     </View>
              </TouchableRipple>
-            </Drawer.Section>
+            </Drawer.Section> */}
           </View>
       </DrawerContentScrollView>
       <Drawer.Section style={styles.bottomDrawerSection}>

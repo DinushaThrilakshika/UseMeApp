@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -20,6 +20,7 @@ import {
   Button,
   StatusBar,
   Settings,
+  ActivityIndicator,
 } from 'react-native';
 
 import {
@@ -41,16 +42,16 @@ const Drawer = createDrawerNavigator();
 const App = () => {
   return(
     <NavigationContainer>
-      
-      <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/> }>
+       {/* <RootStackScreen/>  */}
+       <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/> }>
         <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
         <Drawer.Screen name="AboutScreen" component={AboutScreen} />
         <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
        </Drawer.Navigator>
 
-    </NavigationContainer>
+    </NavigationContainer> 
   );
 };
 
 export default App;
- {/* <RootStackScreen/> */}
+ 
